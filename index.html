@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b90000">
+  <meta name="description" content="Create a personalised PRP supporter endorsement flyer in your browser.">
+  <title>PRP Supporter Studio | Create Your Flyer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to flyer creator</a>
+
+  <header class="topbar">
+    <a class="identity" href="./" aria-label="PRP Supporter Studio home">
+      <span class="identity-symbol" aria-hidden="true">PRP</span>
+      <span class="identity-copy">
+        <strong>SUPPORTER STUDIO</strong>
+        <small>PEOPLE'S REDEMPTION PARTY</small>
+      </span>
+    </a>
+    <div class="topbar-tag"><span class="status-dot"></span> FLYER CREATOR</div>
+  </header>
+
+  <main id="main-content">
+    <section class="intro-section">
+      <div class="intro-copy">
+        <p class="eyebrow">YOUR VOICE. YOUR SUPPORT. YOUR FLYER.</p>
+        <h1>Make the message <span>personal.</span></h1>
+        <p class="intro-description">
+          Add your name and photograph to the campaign design, adjust your portrait,
+          then save your finished flyer to share.
+        </p>
+      </div>
+      <div class="intro-mark" aria-hidden="true">
+        <span class="mark-red"></span><span class="mark-white"></span><span class="mark-black"></span>
+      </div>
+    </section>
+
+    <section class="creator-layout" aria-label="Flyer creation workspace">
+      <aside class="editor-card" aria-labelledby="editor-title">
+        <div class="card-heading">
+          <div class="heading-icon" aria-hidden="true">✎</div>
+          <div>
+            <p class="section-kicker">CUSTOMISE</p>
+            <h2 id="editor-title">Your details</h2>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label for="supporterName">Supporter name</label>
+          <input id="supporterName" type="text" maxlength="34" placeholder="e.g. Sani Ahmad Tijjani" autocomplete="name">
+          <p class="field-hint">Your name appears in uppercase on the flyer.</p>
+        </div>
+
+        <div class="form-section photo-section">
+          <label for="supporterPhoto">Your photograph</label>
+          <label class="upload-dropzone" for="supporterPhoto">
+            <span class="upload-icon" aria-hidden="true">↑</span>
+            <span class="upload-title">Choose a photo</span>
+            <span class="upload-subtitle">JPG, PNG or another image format</span>
+          </label>
+          <input class="visually-hidden-file" id="supporterPhoto" type="file" accept="image/*">
+          <p class="field-hint">Select a clear portrait. Your photo stays on this device; it is not uploaded.</p>
+        </div>
+
+        <div class="form-section adjustment-section">
+          <div class="range-heading">
+            <label for="photoZoom">Adjust photo zoom</label>
+            <output id="zoomValue" for="photoZoom">1.0×</output>
+          </div>
+          <input id="photoZoom" type="range" min="1" max="3" step="0.01" value="1">
+          <div class="range-labels"><span>Fit</span><span>Zoom in</span></div>
+          <p class="field-hint">You can also drag your portrait inside the flyer preview to reposition it.</p>
+        </div>
+
+        <div class="editor-actions">
+          <button id="downloadBtn" class="download-btn" type="button">
+            <span aria-hidden="true">↓</span> Download flyer (PNG)
+          </button>
+          <p id="status" class="status" role="status" aria-live="polite">Your flyer is ready to personalise.</p>
+        </div>
+
+        <div class="privacy-note">
+          <span aria-hidden="true">▣</span>
+          <p><strong>Your photo stays private.</strong> Image selection and flyer creation happen locally in your browser.</p>
+        </div>
+      </aside>
+
+      <section class="preview-card" aria-labelledby="preview-title">
+        <div class="preview-toolbar">
+          <div>
+            <p class="section-kicker">LIVE PREVIEW</p>
+            <h2 id="preview-title">Your campaign flyer</h2>
+          </div>
+          <span class="canvas-spec">1080 × 1350 <b>·</b> 4:5</span>
+        </div>
+
+        <div class="preview-stage">
+          <div class="preview-paper">
+            <canvas id="flyerCanvas" width="1080" height="1350"
+              aria-label="Live preview of your personalised PRP campaign flyer"></canvas>
+          </div>
+        </div>
+
+        <div class="preview-caption">
+          <span class="caption-indicator"></span>
+          <p>Live preview — changes appear here automatically.</p>
+          <p class="drag-tip"><span aria-hidden="true">✥</span> Drag your photo to reposition it</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="how-section" aria-labelledby="how-title">
+      <div class="how-heading">
+        <p class="section-kicker">THREE SIMPLE STEPS</p>
+        <h2 id="how-title">Create it. Save it. Share it.</h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step-item">
+          <span class="step-number">01</span>
+          <div><h3>Add your details</h3><p>Type your name and choose a clear photograph.</p></div>
+        </article>
+        <article class="step-item">
+          <span class="step-number">02</span>
+          <div><h3>Adjust your portrait</h3><p>Use the zoom control or drag the photo into position.</p></div>
+        </article>
+        <article class="step-item">
+          <span class="step-number">03</span>
+          <div><h3>Download and share</h3><p>Save your personalised PNG and share it with others.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-brand"><span>PRP</span> SUPPORTER STUDIO</div>
+    <p>Created by Sani Ahmad Tijjani</p>
+    <p class="footer-small">A browser-based flyer creator · No account required</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
