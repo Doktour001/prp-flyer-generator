@@ -22,9 +22,9 @@
   let dragState = null;
 
   // These are local repository assets. If the logo is absent, a vector fallback is drawn.
-  governor.src = "./assets/governor.jpg";
-  deputy.src = "./assets/deputy.jpg";
-  prpLogo.src = "./assets/prp-logo.png";
+  governor.src = "./governor.jpg";
+  deputy.src = "./deputy.jpg";
+  prpLogo.src = "./prp-logo.png";
   [governor, deputy, prpLogo].forEach(img => img.addEventListener("load", draw));
   [governor, deputy, prpLogo].forEach(img => img.addEventListener("error", draw));
 
